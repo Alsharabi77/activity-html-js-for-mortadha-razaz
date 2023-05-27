@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+      .Sw {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" class="line" id="1" />
+    <label for="1">Task 1</label><br />
+    <input type="checkbox" class="line" id="2" />
+    <label for="2">Task 2</label><br />
+    <input type="checkbox" class="line" id="3" />
+    <label for="3">Task 3</label><br />
+    <input type="checkbox" class="line" id="4" />
+    <label for="4">Task 4</label><br />
+    <input type="checkbox" class="line" id="5" />
+    <label for="5">Task 5</label><br />
+
+    <script>
+      const checkboxes = document.getElementsByClassName("line");
+
+      for (let i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].addEventListener("click", function () {
+          const isChecked = this.checked;
+          const label = this.nextElementSibling;
+          if (isChecked) {
+            label.classList.add("Sw");
+          } else {
+            label.classList.remove("Sw");
+          }
+        });
+      }
+    </script>
+    <footer dir="rtl">
+        
+    </footer>
+  </body>
+</html>
